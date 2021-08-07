@@ -1,0 +1,18 @@
+.b-button {
+    position: relative;
+    padding: 6px 12px;
+    font-size: 14px;
+/*    color: #FFF;*/
+    cursor: pointer;
+	outline: none;
+/*    background: #0987eb;*/
+/*    border: 1px solid #4E7EAB;*/
+    border: 1px solid;
+    border-radius: 4px;
+/*    box-shadow: 0 2px 3px rgba(9, 135, 235, .6);*/
+    transition: box-shadow .2s ease-in-out;        
+}
+
+.b-button:hover {
+/*    box-shadow: 0 2px 8px rgba(9, 135, 235, 1);*/
+}
