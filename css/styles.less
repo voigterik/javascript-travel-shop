@@ -1,0 +1,39 @@
+@import url(variables.less);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: @color-text;
+    text-decoration: none;
+}
+
+body {    
+    font-family: 'Poppins', Verdana, sans-serif;
+    color: @color-text;
+}
+
+h1 {
+    
+    grid-column: 1 / -1;
+    font-size: 2em;    
+    border-bottom: 1px solid #bada55;
+}
+
+.b-grid {      
+    margin: auto;
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 185px);
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(auto, 245px);
+    grid-gap: 5em 2em;
+    justify-content: center;
+    align-content: center;
+}
