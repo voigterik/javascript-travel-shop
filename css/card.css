@@ -63,7 +63,7 @@
   opacity: 0;
 }
 .b-card .fa-youtube-play {
-  color: var(--color-red);
+  color: #FF0000;
   transition: transform 0.2s linear;
 }
 .b-card .fa-youtube-play:hover {
@@ -113,33 +113,15 @@
   z-index: 4;
   width: 185px;
   height: 245px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  background: url(../img/image-not-found.svg) center center no-repeat #f8f8ff;
+  background-size: 30%;
   border-radius: 10px;
   transition: transform 0.16s ease 0s;
   will-change: transform;
-}
-.b-card .e-iceland {
-  background: url(https://images.unsplash.com/photo-1561234910-5a98dba1ed6a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80) 0 -50px no-repeat;
-}
-.b-card .e-ireland {
-  background: url(https://images.unsplash.com/photo-1555577508-d4497bed817e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=367&q=80) -150px -120px no-repeat;
-}
-.b-card .e-thailand {
-  background: url(https://images.unsplash.com/photo-1494949360228-4e9bde560065?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) -140px -140px no-repeat;
-}
-.b-card .e-germany {
-  background: url(https://images.unsplash.com/photo-1548455455-ce1cc9ae81dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) -70px -120px no-repeat;
-}
-.b-card .e-spain {
-  background: url(https://images.unsplash.com/photo-1589704379319-3b83010f661e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=358&q=80) -70px -150px no-repeat;
-}
-.b-card .e-switzerland {
-  background: url(https://images.unsplash.com/photo-1594101365866-fd7722ffe496?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3dpdHplcmxhbmR8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) -180px -200px no-repeat;
-}
-.b-card .e-norway {
-  background: url(https://images.unsplash.com/photo-1603711663821-17d5023c486f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80) -100px -80px no-repeat;
-}
-.b-card .e-brazil {
-  background: url(https://images.unsplash.com/photo-1603395441936-35454edebaa5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80) -90px -160px no-repeat;
 }
 .b-card .e-more-info {
   position: absolute;

@@ -1,12 +1,11 @@
 // badge numbers auto generated
-// rotating images (gallery)
 
 const year = document.querySelector(".js-year");
 const cards = document.querySelectorAll(".js-card");
 const hearts = document.querySelectorAll(".js-heart");
 const menuButton = document.querySelector(".js-menu-button");
 
-// change year
+// get current year
 const date = new Date();
 year.innerHTML = date.getFullYear();
 
@@ -36,7 +35,6 @@ const hoverStyle = (target) => {
 }
 
 cards.forEach(hoverStyle);
-
 
 // fill heart icons with solid color when clicked
 const toggleHeart = (target) => {

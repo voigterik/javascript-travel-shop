@@ -3,14 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-ul,
-li {
-  list-style: none;
-}
-a {
-  color: #333333;
-  text-decoration: none;
-}
 body {
   font-family: 'Poppins', Verdana, sans-serif;
   color: #333333;
@@ -19,6 +11,17 @@ h1 {
   grid-column: 1 / -1;
   font-size: 2em;
   border-bottom: 1px solid #bada55;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
 }
 .b-grid {
   margin: auto;
