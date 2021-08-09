@@ -1,5 +1,3 @@
-// badge numbers auto generated
-
 const body = document.querySelector("body");
 
 // card items
@@ -63,7 +61,6 @@ const hoverStyle = (target) => {
         });
     });
 }
-
 cards.forEach(hoverStyle);
 
 // fill heart icons with solid color when clicked
@@ -81,5 +78,14 @@ const toggleHeart = (target) => {
         }
     });
 }
-
 hearts.forEach(toggleHeart);
+
+// generate card numbers
+const cardNumbers = () => {
+    const badges = document.querySelectorAll(".e-badge");  
+    let number = 1;  
+    badges.forEach(badge => {        
+        badge.textContent = number++;
+    });
+}
+cardNumbers();
