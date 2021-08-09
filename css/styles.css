@@ -7,6 +7,10 @@ body {
   font-family: 'Poppins', Verdana, sans-serif;
   color: #333333;
 }
+body.m-modal-open {
+  margin-right: 17px;
+  overflow: hidden;
+}
 h1 {
   grid-column: 1 / -1;
   font-size: 2em;

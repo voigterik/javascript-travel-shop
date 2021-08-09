@@ -1,13 +1,43 @@
 // badge numbers auto generated
 
-const year = document.querySelector(".js-year");
+const body = document.querySelector("body");
+
+// card items
 const cards = document.querySelectorAll(".js-card");
 const hearts = document.querySelectorAll(".js-heart");
 const menuButton = document.querySelector(".js-menu-button");
 
 // get current year
+const year = document.querySelector(".js-year");
 const date = new Date();
 year.innerHTML = date.getFullYear();
+
+// create loading modal and attach to DOM
+const loadingModal = () => {    
+    const modal = document.createElement("div");
+    const spinner = document.createElement("i");
+
+    spinner.classList.add("fa", "fa-spinner", "fa-pulse", "fa-5x", "fa-fw");
+    modal.classList.add("js-modal", "b-modal");
+    modal.appendChild(spinner);
+    body.appendChild(modal);
+}
+loadingModal();
+
+// check if modal is visible and attach class to body if so
+const modalVisible = () => {
+    if(loadingModal){
+        body. classList.add("m-modal-open");
+    } 
+}
+modalVisible();
+
+// wait for document to be loaded, then remoce modal from DOM
+window.onload = function(){    
+    body.classList.remove("m-modal-open");
+    const modal = document.querySelector(".js-modal");
+    modal.remove();
+};
 
 // toggle menu
 const toggleMenu = (button) => {
