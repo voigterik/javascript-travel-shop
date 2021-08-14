@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*.m-bold {
+  font-weight: 700;
+}
 body {
   font-family: 'Poppins', Verdana, sans-serif;
   color: #333333;

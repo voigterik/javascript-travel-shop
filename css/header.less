@@ -25,10 +25,15 @@ header {
 
     .e-menu {    
         grid-template-columns: repeat(7, auto);
-        grid-gap: 15px;
+        grid-gap: 15px;        
+    }
 
-        li {    
-            padding: 0 5px;
+    .e-menu-item {    
+        padding: 0 5px;
+
+        &:first-child {
+            padding-right: 10px;
+            border-right: 1px solid @color-text;             
         }
     }
     

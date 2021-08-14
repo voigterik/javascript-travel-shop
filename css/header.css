@@ -23,8 +23,12 @@ header .e-menu {
   grid-template-columns: repeat(7, auto);
   grid-gap: 15px;
 }
-header .e-menu li {
+header .e-menu-item {
   padding: 0 5px;
+}
+header .e-menu-item:first-child {
+  padding-right: 10px;
+  border-right: 1px solid #333333;
 }
 header .e-menu-button {
   justify-self: end;
