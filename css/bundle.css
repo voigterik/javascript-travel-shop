@@ -55,7 +55,8 @@ header a {
   font-weight: 500;
   transition: color 0.15s linear;
 }
-header a:hover {
+header a:hover,
+header a.m-active {
   color: #717790;
 }
 header .e-logo {
@@ -155,6 +156,9 @@ header .e-menu-button {
 .b-card.m-unavailable {
   opacity: 0.5;
   transition: opacity 0.3s linear;
+}
+.b-card.m-hide {
+  display: none;
 }
 .b-card .e-hover-container {
   position: relative;

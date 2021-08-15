@@ -12,7 +12,8 @@ header a {
   font-weight: 500;
   transition: color 0.15s linear;
 }
-header a:hover {
+header a:hover,
+header a.m-active {
   color: #717790;
 }
 header .e-logo {
