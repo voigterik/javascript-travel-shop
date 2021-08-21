@@ -138,11 +138,15 @@
         justify-items: center;
         align-items: center;
         overflow: hidden;
-        background: url(../img/image-not-found.svg) center center no-repeat @color-ghostwhite;
-        background-size: 30%;
+        background: @color-ghostwhite;
         border-radius: 10px;
         transition: transform .16s ease 0s;
         will-change: transform;
+
+        &.m-broken-image {
+            background: url(../img/image-not-found.svg) center center no-repeat @color-ghostwhite;
+            background-size: 30%;
+        }
     }
 
     .e-more-info {

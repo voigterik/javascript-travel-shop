@@ -231,11 +231,14 @@ header .e-menu-button {
   justify-items: center;
   align-items: center;
   overflow: hidden;
-  background: url(../img/image-not-found.svg) center center no-repeat #f8f8ff;
-  background-size: 30%;
+  background: #f8f8ff;
   border-radius: 10px;
   transition: transform 0.16s ease 0s;
   will-change: transform;
+}
+.b-card .e-image.m-broken-image {
+  background: url(../img/image-not-found.svg) center center no-repeat #f8f8ff;
+  background-size: 30%;
 }
 .b-card .e-more-info {
   position: absolute;

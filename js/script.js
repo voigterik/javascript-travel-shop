@@ -41,7 +41,7 @@ const modalVisible = () => {
 }
 modalVisible();
 
-// wait for document to be loaded, then remoce modal from DOM
+// wait for document to be loaded, then remove modal from DOM
 window.onload = function(){    
     body.classList.remove("m-modal-open");
     const modal = document.querySelector(".js-modal");
@@ -94,8 +94,12 @@ async function getCountries(){
                     <i class="fa fa-thumbs-up"></i> <span class="js-percent e-percent">79%</span>
                 </span>
             </div>
-            <div class="js-image js-country-${country.alpha3Code} e-image">
-                
+            <div class="js-image js-country-${country.name} e-image">
+                <img 
+                    src="https://images.unsplash.com/photo-1562620948-7ef06527f430?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80" 
+                    alt="" 
+                    class="js-image"                    
+                />
             </div>
             <div class="js-more-info e-more-info">
                 <h5 class="js-country-name">${country.name}</h5>
@@ -116,15 +120,40 @@ async function getCountries(){
         const grid = document.querySelector(".js-grid");
         grid.appendChild(card);        
     });
-
+    // loadingModal();
 }
 
 getCountries()
     .then(() => {
-        cardNumbers();                         
+        cardNumbers();  
+        setTimeout(() => {
+            showBrokenImage();
+        }, 3000);        
     });
 
+// add active style to header links
+const activeHeaderLink = (link) => {
+    link.addEventListener("click", () => {
+        headerLinks.forEach(headerLink => {
+            headerLink.classList.remove("m-active");
+        });
+        link.classList.add("m-active");
+    });
+}
+headerLinks.forEach(activeHeaderLink);
+
 // filter countries
+// show all
+function showAllCountries(){    
+    const allCards = document.querySelectorAll(".js-card");
+    allCards.forEach(card => {
+        card.classList.remove("m-hide");                              
+    });        
+}
+
+const allCountriesLink = document.querySelector(".js-allLink");
+allCountriesLink.addEventListener("click", showAllCountries);
+
 // americas
 function showAmericas(){    
     const allCards = document.querySelectorAll(".js-card");
@@ -195,7 +224,6 @@ function showOceania(){
 const oceaniaLink = document.querySelector(".js-oceaniaLink");
 oceaniaLink.addEventListener("click", showOceania);
 
-
 // set opacity to all cards but active one
 const hoverStyle = (target) => {
     target.addEventListener("mouseover", function () {
@@ -237,16 +265,18 @@ const cardNumbers = () => {
     });
 }
 
-// add active style to header links
-const activeHeaderLink = (link) => {
-    link.addEventListener("click", () => {
-        headerLinks.forEach(headerLink => {
-            headerLink.classList.remove("m-active");
-        });
-        link.classList.add("m-active");
+// check if images are loaded, show "No Image" image if not
+function showBrokenImage() {
+    const images = document.querySelectorAll(".js-image img");
+    images.forEach(image => {
+        console.log(image.offsetHeight);
+        if(image.offsetHeight === 0){
+            image.parentNode.classList.add("m-broken-image");
+        } 
     });
 }
-headerLinks.forEach(activeHeaderLink);
+
+
 
 const photos = [
     {
@@ -256,4 +286,5 @@ const photos = [
         albania: "https://images.unsplash.com/photo-1562620948-7ef06527f430?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80"
     }
 ];
+
 
