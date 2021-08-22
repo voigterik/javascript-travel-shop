@@ -1,0 +1,12 @@
+/* 
+    TODO JS
+    -----------
+    - fix card region class names (use marker?)
+    - country images
+*/
+
+/* 
+    TODO CSS
+    -----------
+    - fix header menu (breakpoints)
+*/

@@ -1,11 +1,3 @@
-/* 
-    TODO 
-    -----------
-    - match clicked header link with cards
-    - country search form & function
-    - country images
-*/
-
 const body = document.querySelector("body");
 
 // header links
@@ -191,75 +183,19 @@ function showAllCountries(){
 const allCountriesLink = document.querySelector(".js-allLink");
 allCountriesLink.addEventListener("click", showAllCountries);
 
-// americas
-function showAmericas(){    
-    const allCards = document.querySelectorAll(".js-card");
-    allCards.forEach(card => {
-        card.classList.add("m-hide");
-        if(card.classList.contains("js-region-Americas")){
-            card.classList.remove("m-hide");
-        }                        
-    });        
-}
-
-const americasLink = document.querySelector(".js-americasLink");
-americasLink.addEventListener("click", showAmericas);
-
-// asia
-function showAsia(){    
-    const allCards = document.querySelectorAll(".js-card");
-    allCards.forEach(card => {
-        card.classList.add("m-hide");
-        if(card.classList.contains("js-region-Asia")){
-            card.classList.remove("m-hide");
-        }                        
-    });        
-}
-
-const asiaLink = document.querySelector(".js-asiaLink");
-asiaLink.addEventListener("click", showAsia);
-
-// africa
-function showAfrica(){    
-    const allCards = document.querySelectorAll(".js-card");
-    allCards.forEach(card => {
-        card.classList.add("m-hide");
-        if(card.classList.contains("js-region-Africa")){
-            card.classList.remove("m-hide");
-        }                        
-    });        
-}
-
-const africaLink = document.querySelector(".js-africaLink");
-africaLink.addEventListener("click", showAfrica);
-
-// europe
-function showEurope(){    
-    const allCards = document.querySelectorAll(".js-card");
-    allCards.forEach(card => {
-        card.classList.add("m-hide");
-        if(card.classList.contains("js-region-Europe")){
-            card.classList.remove("m-hide");
-        }                        
-    });        
-}
-
-const europeLink = document.querySelector(".js-europeLink");
-europeLink.addEventListener("click", showEurope);
-
-// oceania
-function showOceania(){    
-    const allCards = document.querySelectorAll(".js-card");
-    allCards.forEach(card => {
-        card.classList.add("m-hide");
-        if(card.classList.contains("js-region-Oceania")){
-            card.classList.remove("m-hide");
-        }                        
-    });        
-}
-
-const oceaniaLink = document.querySelector(".js-oceaniaLink");
-oceaniaLink.addEventListener("click", showOceania);
+// show regions matching clicked header link
+const regionsLinks = document.querySelectorAll(".js-regionLink");
+regionsLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        const allMarkers = document.querySelectorAll(".js-marker");
+        allMarkers.forEach(marker => {
+            if(marker.innerText.includes(link.innerText.toLowerCase())){
+                marker.parentNode.classList.remove("m-hide");
+            } else
+                marker.parentNode.classList.add("m-hide");
+        });        
+    });
+});
 
 // set opacity to all cards but active one
 const hoverStyle = (target) => {
