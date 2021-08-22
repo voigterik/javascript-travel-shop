@@ -3,6 +3,7 @@
   z-index: 1;
   border-radius: 10px;
   background: #f8f8ff;
+  transition: all 0.16s ease-in-out;
 }
 .b-card:hover {
   z-index: 2;
@@ -180,4 +181,7 @@
 }
 .b-card:hover .b-button {
   opacity: 1;
+}
+.fok {
+  border: 5px solid orange;
 }

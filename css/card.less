@@ -5,6 +5,7 @@
     z-index: 1;
     border-radius: 10px;
     background: @color-ghostwhite;
+    transition: all .16s ease-in-out;
 
     &:hover {   
         z-index: 2;
@@ -50,7 +51,7 @@
     &.m-unavailable {
         opacity: .5;
         transition: opacity .3s linear;
-    }
+    }    
 
     &.m-hide {
         display: none;
@@ -213,4 +214,9 @@
 
 .b-card:hover .b-button {
     opacity: 1;
+}
+
+
+.fok {
+    border: 5px solid orange;
 }

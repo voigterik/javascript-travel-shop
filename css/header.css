@@ -1,7 +1,7 @@
 header {
   padding: 1em;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   grid-gap: 20px;
   align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
@@ -34,6 +34,48 @@ header .e-menu-item:first-child {
 header .e-menu-button {
   justify-self: end;
   cursor: pointer;
+}
+header .e-search {
+  position: relative;
+}
+header .e-search.m-active .e-search-icon {
+  display: none;
+}
+header .e-search.m-active .e-close-search-icon {
+  display: block;
+}
+header .e-search-icon,
+header .e-close-search-icon {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  max-height: 20px;
+  transition: transform ease-in-out 0.2s;
+}
+header .e-search-icon:hover,
+header .e-close-search-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+header .e-close-search-icon {
+  display: none;
+}
+header .e-search-input {
+  width: 0;
+  height: 0;
+  padding: 5px 35px 5px 10px;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+}
+header .e-search-input.m-active {
+  width: 100%;
+  height: auto;
+  opacity: 1;
 }
 @media (max-width: 600px) {
   i[aria-expanded="false"] + .e-menu {
