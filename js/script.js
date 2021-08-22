@@ -120,7 +120,7 @@ async function getCountries(){
 
         // card HTML
         card.innerHTML = `
-            <div class="js-marker">${country.region.toLowerCase()} ${country.name.toLowerCase()}</div>
+            <div class="js-marker e-marker">${country.region.toLowerCase()} ${country.name.toLowerCase()}</div>
             <span class="js-badge e-badge"></span>
             <div class="js-hover-container e-hover-container"></div>
             <div class="js-extra e-extra">
