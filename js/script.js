@@ -3,9 +3,7 @@ const body = document.querySelector("body");
 // header links
 const headerLinks = document.querySelectorAll(".js-headerLink");
 
-// card items
-// const cards = document.querySelectorAll(".js-card");
-const hearts = document.querySelectorAll(".js-heart");
+// hamburger menu icon
 const menuButton = document.querySelector(".js-menu-button");
 
 // get current year
@@ -42,11 +40,9 @@ window.onload = function(){
 
 // toggle menu
 const toggleMenu = (button) => {
-    
     // toggle aria-expanded between "false" and "true"
     let state = button.currentTarget.getAttribute("aria-expanded") === "true" || false;
     menuButton.setAttribute("aria-expanded", !state);
-    console.log(menuButton);
 }
 menuButton.addEventListener("click", toggleMenu);
 
@@ -56,19 +52,40 @@ const toggleSearch = () => {
     const searchIcon = document.querySelector(".js-search-icon");
     const searchIconClose = document.querySelector(".js-close-search-icon");
     const searchInput = document.querySelector(".js-search-input");
+    const header = document.querySelector(".js-header");
 
     searchIcon.addEventListener("click", () => {
         searchContainer.classList.add("m-active");
         searchInput.classList.add("m-active");
+        header.classList.add("m-search-open");
     });
 
     searchIconClose.addEventListener("click", () => {
         searchContainer.classList.remove("m-active");
         searchInput.classList.remove("m-active");
+        header.classList.add("m-search-open");
     });
+
+    // window.addEventListener("resize", () => {
+    //     let windowWidth = window.innerWidth;
+    //     const headerMenu = document.querySelector(".js-menu");
+    //     if(windowWidth < 767 && header.classList.contains("m-search-open")){
+    //         console.log(windowWidth);
+    //         menuButton.setAttribute("aria-expanded", "false");
+    //         headerMenu.classList.add("m-hide");
+    //     }
+    // });
 
 }
 toggleSearch();
+
+// browser window resize
+function getWindowSize(){
+    var windowWidth = window.innerWidth;
+    return windowWidth;
+}
+
+window.onresize = getWindowSize;
 
 // search for destinations
 const headerSearch = (searchTerm) => {

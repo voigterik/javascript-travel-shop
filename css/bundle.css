@@ -67,6 +67,9 @@ header .e-menu {
   grid-template-columns: repeat(7, auto);
   grid-gap: 15px;
 }
+header .e-menu.m-hide {
+  display: none;
+}
 header .e-menu-item {
   padding: 0 5px;
 }

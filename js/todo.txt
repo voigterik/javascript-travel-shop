@@ -1,8 +1,10 @@
 /* 
     TODO JS
     -----------
-    - fix card region class names (use marker?)
+    - skeleton loading
     - country images
+    - randomise thumbs up percentage
+    - search bar
 */
 
 /* 
