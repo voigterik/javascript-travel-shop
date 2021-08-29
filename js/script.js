@@ -159,6 +159,7 @@ getCountries()
             showBrokenImage();
         }, 3000); 
         hoverStyle();
+        toggleHeart();
     });
 
 // add active style to header links
@@ -217,20 +218,22 @@ function hoverStyle() {
 }
 
 // fill heart icons with solid color when clicked
-const toggleHeart = (target) => {
-    target.addEventListener("click", function () {
-        if (target.classList.contains("fa-heart-o")) {
-            target.classList.remove("fa-heart-o");
-            target.classList.add("fa-heart");
-            target.classList.toggle("m-liked");
-        } else {
-            target.classList.add("fa-heart-o");
-            target.classList.remove("fa-heart");
-            target.classList.toggle("m-liked");            
-        }
+function toggleHeart(){
+    const hearts = document.querySelectorAll(".js-heart");
+    hearts.forEach(heart => {
+        heart.addEventListener("click", () => {
+            if (heart.classList.contains("fa-heart-o")) {
+                    heart.classList.remove("fa-heart-o");
+                    heart.classList.add("fa-heart");
+                    heart.classList.toggle("m-liked");
+                } else {
+                    heart.classList.add("fa-heart-o");
+                    heart.classList.remove("fa-heart");
+                    heart.classList.toggle("m-liked");            
+                }
+            });
     });
 }
-hearts.forEach(toggleHeart);
 
 // generate card numbers
 const cardNumbers = () => {
