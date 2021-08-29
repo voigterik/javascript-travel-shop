@@ -4,7 +4,7 @@ const body = document.querySelector("body");
 const headerLinks = document.querySelectorAll(".js-headerLink");
 
 // card items
-const cards = document.querySelectorAll(".js-card");
+// const cards = document.querySelectorAll(".js-card");
 const hearts = document.querySelectorAll(".js-heart");
 const menuButton = document.querySelector(".js-menu-button");
 
@@ -157,7 +157,8 @@ getCountries()
         cardNumbers();  
         setTimeout(() => {
             showBrokenImage();
-        }, 3000);        
+        }, 3000); 
+        hoverStyle();
     });
 
 // add active style to header links
@@ -198,20 +199,22 @@ regionsLinks.forEach(link => {
 });
 
 // set opacity to all cards but active one
-const hoverStyle = (target) => {
-    target.addEventListener("mouseover", function () {
-        cards.forEach(function (card) {
-            card.classList.add("m-unavailable");
-            target.classList.remove("m-unavailable");
-        });
-    });
-    target.addEventListener("mouseleave", function () {
-        cards.forEach(function (card) {
+function hoverStyle() {
+    const cards = document.querySelectorAll(".js-card");
+    cards.forEach(card => {
+        card.addEventListener("mouseover", () => {        
+            cards.forEach(card => {
+                card.classList.add("m-unavailable");
+            });
             card.classList.remove("m-unavailable");
         });
-    });
+        card.addEventListener("mouseleave", () => {
+            cards.forEach(card => {
+                card.classList.remove("m-unavailable");
+            });
+        });
+    });       
 }
-cards.forEach(hoverStyle);
 
 // fill heart icons with solid color when clicked
 const toggleHeart = (target) => {
