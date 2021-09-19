@@ -5,6 +5,7 @@ export const toggleSearch = () => {
     const searchIconClose = document.querySelector(".js-close-search-icon");
     const searchInput = document.querySelector(".js-search-input");
     const header = document.querySelector(".js-header");
+    const menuButton = document.querySelector(".js-menu-button");
 
     searchIcon.addEventListener("click", () => {
         searchContainer.classList.add("m-active");
@@ -15,8 +16,24 @@ export const toggleSearch = () => {
     searchIconClose.addEventListener("click", () => {
         searchContainer.classList.remove("m-active");
         searchInput.classList.remove("m-active");
-        header.classList.add("m-search-open");
+        header.classList.remove("m-search-open");
     });
+
+    
+
+
+
+
+
+
+    // function getWindowSize(){
+    //     var windowWidth = window.innerWidth;
+    //     return windowWidth;
+    // }
+    // window.onresize = getWindowSize;
+
+
+
 
     // window.addEventListener("resize", () => {
     //     let windowWidth = window.innerWidth;
@@ -25,6 +42,9 @@ export const toggleSearch = () => {
     //         console.log(windowWidth);
     //         menuButton.setAttribute("aria-expanded", "false");
     //         headerMenu.classList.add("m-hide");
+    //     } else {
+    //         menuButton.setAttribute("aria-expanded", "true");
+    //         headerMenu.classList.remove("m-hide");
     //     }
     // });
 

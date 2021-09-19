@@ -3,8 +3,6 @@ export function showRegions() {
 
     // show all
     const allCountriesLink = document.querySelector(".js-allLink");
-
-
     allCountriesLink.addEventListener("click", () => {
         const allCards = document.querySelectorAll(".js-card");
         allCards.forEach(card => {
