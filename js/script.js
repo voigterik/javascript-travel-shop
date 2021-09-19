@@ -9,6 +9,7 @@ import { cardHoverStyle } from "./modules/cardHoverStyle.js";
 import { showBrokenImage } from "./modules/showBrokenImage.js";
 import { toggleHeart } from "./modules/toggleHeart.js";
 import { cardNumbers } from "./modules/cardNumbers.js";
+import { destinationSearch } from "./modules/destinationSearch.js";
 
 loadingModal();
 activeHeaderLink();
@@ -24,6 +25,7 @@ getCountries()
         toggleHeart();
     });
 showRegions();
+destinationSearch();
 
 // GLOBAL VARIABLES
 const body = document.querySelector("body");
@@ -40,24 +42,10 @@ function getWindowSize(){
 }
 window.onresize = getWindowSize;
 
-// search for destinations
-const headerSearch = (searchTerm) => {
-    const destinations = document.querySelectorAll(".js-marker");
-    destinations.forEach(destination => {
-        if(destination.innerText.toLowerCase().includes(searchTerm.toLowerCase())){
-            destination.parentNode.classList.remove("m-hide");
-            
-        } else 
-            destination.parentNode.classList.add("m-hide");
-    });
-}
-const searchInput = document.querySelector(".js-search-input");
-searchInput.addEventListener("input", (e) => {
-    headerSearch(e.target.value);
-});
 
 
 
+// TEST
 function countryNames () {
     const names = document.querySelectorAll("[class*=js-country-]");
     names.forEach(name => {
