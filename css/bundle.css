@@ -259,7 +259,7 @@ header .e-search-input.m-active {
   opacity: 0;
 }
 .b-card .fa-youtube-play {
-  color: #FF0000;
+  color: #ff0000;
   transition: transform 0.2s linear;
 }
 .b-card .fa-youtube-play:hover {
@@ -274,7 +274,7 @@ header .e-search-input.m-active {
   transform: scale(1.1);
 }
 .b-card i[class*="heart"].m-liked {
-  color: #FF0000;
+  color: #ff0000;
 }
 .b-card .fa-file-photo-o {
   transition: transform 0.2s linear;
@@ -398,4 +398,15 @@ header .e-search-input.m-active {
   align-items: center;
   justify-items: center;
   background: rgba(248, 248, 255, 0.85);
+}
+.b-error-container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #ff0000;
+  text-align: center;
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px solid #ff0000;
+  border-radius: 6px;
 }

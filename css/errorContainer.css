@@ -1,0 +1,11 @@
+.b-error-container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #ff0000;
+  text-align: center;
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px solid #ff0000;
+  border-radius: 6px;
+}

@@ -73,7 +73,7 @@
   opacity: 0;
 }
 .b-card .fa-youtube-play {
-  color: #FF0000;
+  color: #ff0000;
   transition: transform 0.2s linear;
 }
 .b-card .fa-youtube-play:hover {
@@ -88,7 +88,7 @@
   transform: scale(1.1);
 }
 .b-card i[class*="heart"].m-liked {
-  color: #FF0000;
+  color: #ff0000;
 }
 .b-card .fa-file-photo-o {
   transition: transform 0.2s linear;
