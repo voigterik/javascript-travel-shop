@@ -14,11 +14,6 @@ body.m-modal-open {
   margin-right: 17px;
   overflow: hidden;
 }
-h1 {
-  grid-column: 1 / -1;
-  font-size: 2em;
-  border-bottom: 1px solid #bada55;
-}
 ul,
 li {
   list-style: none;
@@ -29,6 +24,11 @@ a {
 }
 img {
   max-width: 100%;
+}
+.b-header {
+  margin: 2rem;
+  font-size: 2em;
+  border-bottom: 1px solid #bada55;
 }
 .b-grid {
   margin: auto;

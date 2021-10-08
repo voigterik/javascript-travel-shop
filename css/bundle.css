@@ -14,11 +14,6 @@ body.m-modal-open {
   margin-right: 17px;
   overflow: hidden;
 }
-h1 {
-  grid-column: 1 / -1;
-  font-size: 2em;
-  border-bottom: 1px solid #bada55;
-}
 ul,
 li {
   list-style: none;
@@ -29,6 +24,11 @@ a {
 }
 img {
   max-width: 100%;
+}
+.b-header {
+  margin: 2rem;
+  font-size: 2em;
+  border-bottom: 1px solid #bada55;
 }
 .b-grid {
   margin: auto;
@@ -72,6 +72,8 @@ header .e-menu-container {
 }
 header .e-menu-button {
   align-self: center;
+  position: relative;
+  z-index: 1;
   cursor: pointer;
   transition: opacity 0.3s linear;
 }
@@ -403,7 +405,7 @@ header .e-search-input.m-active {
   width: 90vw;
   margin: 0 auto;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ff0000;
   text-align: center;
   background: rgba(255, 0, 0, 0.3);

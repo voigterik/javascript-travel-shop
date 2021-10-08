@@ -32,7 +32,7 @@ export async function getCountries(){
                     <i class="js-heart fa fa-lg fa-heart-o"></i>
                     <span class="js-rating e-rating">
                         <span class="js-rating-text e-rating-text">Rated</span>
-                        <i class="fa fa-thumbs-up"></i> <span class="js-percent e-percent">79%</span>
+                        <i class="fa fa-thumbs-up"></i> <span class="js-percent e-percent">${Math.floor(Math.random() * 100)}%</span>
                     </span>
                 </div>
                 <div class="js-image js-country-${country.name.toLowerCase()} e-image">
@@ -64,7 +64,7 @@ export async function getCountries(){
     } catch(error) {
         console.log(error);
         const errorContainer = document.createElement("div");
-        errorContainer.innerHTML = "Failed to load content. Please try again later.";    
+        errorContainer.innerHTML = "Failed to load. Please try again later.";    
         errorContainer.classList.add("b-error-container");    
         document.body.appendChild(errorContainer);
         
